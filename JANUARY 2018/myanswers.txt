@@ -4,17 +4,36 @@ a) Define API: API is a set of functions that allow creation of applications whi
 features or data of an os, application or other service.
 
 b) ------------TCP------------------------------------------UDP---------
-   - Reliable			-Unreliable 
-   -				-
+   - Reliable			- Unreliable 
+   - Packets are numbered	- Not numbered
    -				-
 
-c) GG
+c) tcp header - http://telescript.denayer.wenk.be/~hcr/cn/idoceo/images/tcp_header.gif
 
 d) int s = socket(domain,type,protocol)
 	s is a descriptor
 	domain = what type of domain, eg: AF_INET
 	type = type of connection = TCP = SOCK_STREAM
 	protocol = protocol used, eg: IPPROTO_TCP / 0
+	
+Question 3
+
+GG
+
+Question 5 
+
+a) bind() & listen()
+
+b) sockaddr_in6 name;
+   name.sin_family = AF_INET6;
+   name.sin_port = htons(12345);
+   name.sin_addr.s_addr = htonl(in6addr_any);
+   
+Question 6
+
+a) JAVA gg
+	
+
 
 
 
