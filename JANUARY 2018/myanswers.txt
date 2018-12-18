@@ -4,7 +4,7 @@ a) Define API: API is a set of functions that allow creation of applications whi
 features or data of an os, application or other service.
 
 b) ------------TCP------------------------------------------UDP---------
-   - Reliable			-Unreliable but faster
+   - Reliable			-Unreliable 
    -				-
    -				-
 
