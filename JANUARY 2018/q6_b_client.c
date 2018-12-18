@@ -14,7 +14,7 @@
 
 int main(int argc, char **argv)
 {
-	int sockfd, n;
+	int sockfd;
 
 	sockfd = socket(AF_INET,SOCK_STREAM, 0); //socket(domain,type,protocol)
 
@@ -24,24 +24,24 @@ int main(int argc, char **argv)
 	servaddr.sin_addr.s_addr = INADDR_ANY; //ip address
 
 	connect(sockfd,(struct sockaddr *)&servaddr,sizeof(servaddr)); //connect(socket,cast address to sockaddr struct,size)	
-	
-    time_t current_time; //time declaration
-    char* c_time_string; //use to convert to string
 
-    current_time = time(NULL); //get current time
+	time_t current_time; //time declaration
+	char* c_time_string; //use to convert to string
 
-    /* Convert to local time format. */
-    c_time_string = ctime(&current_time);
+	current_time = time(NULL); //get current time
 
-    //printf("Current time is %s", c_time_string);
-  		
-  	write(sockfd,&current_time,sizeof(current_time)); //send current to server in time_t format
+	/* Convert to local time format. */
+	c_time_string = ctime(&current_time);
 
-  	char status[20];
+	//printf("Current time is %s", c_time_string);
 
-  	read(sockfd,&status,sizeof(status));
+	write(sockfd,&current_time,sizeof(current_time)); //send current to server in time_t format
 
-  	printf("%s\n", status);
+	char status[20];
 
-  
+	read(sockfd,&status,sizeof(status));
+
+	printf("%s\n", status);
+
+
 }	
